@@ -1,0 +1,13 @@
+1.升级react native版本之后，关闭包服务器，否则mismatch 版本
+
+2.chart 目前不支持0.51.0 使用0.50.4
+
+3.react-native-svg 部分库文件找不到，需要手动引入https://www.jianshu.com/p/b51b79ca14e7
+
+4.
+The following commands produced analyzer issues:
+
+    Analyze /Users/lcz/workspace/APP/temp/node_modules/react-native/ReactCommon/yoga/yoga/YGNodeList.c
+    Analyze /Users/lcz/workspace/APP/temp/node_modules/react-native/ReactCommon/yoga/yoga/Yoga.c
+
+    删除node_modules  重新安装

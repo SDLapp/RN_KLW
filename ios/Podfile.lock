@@ -1,0 +1,126 @@
+PODS:
+  - AMap3DMap (6.1.0):
+    - AMapFoundation (~> 1.4)
+  - AMapFoundation (1.4.3)
+  - boost (1.59.0):
+    - boost/graph-includes (= 1.59.0)
+    - boost/math-includes (= 1.59.0)
+    - boost/numeric-includes (= 1.59.0)
+    - boost/pointer_cast-includes (= 1.59.0)
+    - boost/preprocessor-includes (= 1.59.0)
+    - boost/shared_ptr-includes (= 1.59.0)
+    - boost/string_algorithms-includes (= 1.59.0)
+  - boost/graph-includes (1.59.0)
+  - boost/math-includes (1.59.0)
+  - boost/numeric-includes (1.59.0)
+  - boost/pointer_cast-includes (1.59.0)
+  - boost/preprocessor-includes (1.59.0)
+  - boost/shared_ptr-includes (1.59.0)
+  - boost/string_algorithms-includes (1.59.0)
+  - Charts (3.1.1):
+    - Charts/Core (= 3.1.1)
+  - Charts/Core (3.1.1)
+  - DoubleConversion (1.1.5)
+  - Folly (2016.09.26.00):
+    - boost
+    - DoubleConversion
+    - GLog
+  - GLog (0.3.4)
+  - React (0.50.4):
+    - React/Core (= 0.50.4)
+  - react-native-amap3d (1.0.0-beta.1):
+    - AMap3DMap (~> 6.1.0)
+    - React
+  - React/Core (0.50.4):
+    - yoga (= 0.50.4.React)
+  - React/CxxBridge (0.50.4):
+    - Folly (= 2016.09.26.00)
+    - React/Core
+    - React/cxxreact
+  - React/cxxreact (0.50.4):
+    - boost
+    - Folly (= 2016.09.26.00)
+    - React/jschelpers
+  - React/DevSupport (0.50.4):
+    - React/Core
+    - React/RCTWebSocket
+  - React/fishhook (0.50.4)
+  - React/jschelpers (0.50.4):
+    - Folly (= 2016.09.26.00)
+    - React/PrivateDatabase
+  - React/PrivateDatabase (0.50.4)
+  - React/RCTBlob (0.50.4):
+    - React/Core
+  - React/RCTWebSocket (0.50.4):
+    - React/Core
+    - React/fishhook
+    - React/RCTBlob
+  - RNVectorIcons (4.4.3):
+    - React
+  - SwiftyJSON (4.0.0)
+  - yoga (0.50.4.React)
+
+DEPENDENCIES:
+  - Charts (from `https://github.com/danielgindi/Charts.git`)
+  - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
+  - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
+  - GLog (from `../node_modules/react-native/third-party-podspecs/GLog.podspec`)
+  - react-native-amap3d (from `../node_modules/react-native-amap3d/lib/ios`)
+  - React/Core (from `../node_modules/react-native`)
+  - React/CxxBridge (from `../node_modules/react-native`)
+  - React/DevSupport (from `../node_modules/react-native`)
+  - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+  - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AMap3DMap
+    - AMapFoundation
+    - boost
+
+EXTERNAL SOURCES:
+  Charts:
+    :git: https://github.com/danielgindi/Charts.git
+  DoubleConversion:
+    :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
+  Folly:
+    :podspec: "../node_modules/react-native/third-party-podspecs/Folly.podspec"
+  GLog:
+    :podspec: "../node_modules/react-native/third-party-podspecs/GLog.podspec"
+  React:
+    :path: "../node_modules/react-native"
+  react-native-amap3d:
+    :path: "../node_modules/react-native-amap3d/lib/ios"
+  RNVectorIcons:
+    :path: "../node_modules/react-native-vector-icons"
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+  yoga:
+    :path: "../node_modules/react-native/ReactCommon/yoga"
+
+CHECKOUT OPTIONS:
+  Charts:
+    :commit: 6b730a035c6daf19f695aedbb0d7e5e441fdede2
+    :git: https://github.com/danielgindi/Charts.git
+  SwiftyJSON:
+    :commit: a1700fbb554857fabaa6278222ed31ff3aec3c1e
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+SPEC CHECKSUMS:
+  AMap3DMap: 2cf8028884fc66c7e051f5e8818808949eff290d
+  AMapFoundation: 973682cfe60b92efd73a8ef8f1144fa0fa8e1296
+  boost: 30a15ffb6d9aa4646dd3caffc960753f4cb4ca4e
+  Charts: 82c6776516b844809f55228d720129a9dc25b9f2
+  DoubleConversion: ebb6747c5b66026ad4f97b789c3ceac6f18e57a6
+  Folly: b7255b29f1d693c375d642d0f04f0592181156d9
+  GLog: 3e4e4ae9746ce6bf6e9420c7fc1e08ad59c8ba1a
+  React: 541ba768b9855e10cdc76f55427a5cd0653ca806
+  react-native-amap3d: d7f7dfeca6c95873ffcaca47d3b12a7a6432ec4a
+  RNVectorIcons: c0dbfbf6068fefa240c37b0f71bd03b45dddac44
+  SwiftyJSON: 8cd73b154950360d79292a8dc8c0d0a85d258930
+  yoga: 17521bbb0dd54a47c0b3ac43253e78cdac7488e0
+
+PODFILE CHECKSUM: 0bee30b739084aff514e7916e920f9ae81024db9
+
+COCOAPODS: 1.5.0

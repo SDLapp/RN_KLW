@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="primary_dark">#00ffffff</color>
+    <color name="ksw_md_ripple_normal">#1E000000</color>
+    <color name="ksw_md_ripple_checked">#33019285</color>
+
+    <color name="ksw_md_solid_shadow">#33000000</color>
+
+    <color name="ksw_md_solid_normal">#ECECEC</color>
+    <color name="ksw_md_solid_checked">#019285</color>
+    <color name="ksw_md_solid_disable">#FFFFFF</color>
+    <color name="ksw_md_solid_checked_disable">#aaaaaa</color>
+
+    <color name="result_page_title">#A9A9A9</color>
+    <color name="card_bg">#F4F7F7</color>
+
+
+    <color name="Orange1">#E77F19</color>
+    <color name="Enable">#FAF0E6</color>
+    <color name="MessageBgColor">#F0F0F0</color>
+    <color name="Red">#FF0000</color>
+    <color name="Blue">#3791FF</color>
+    <color name="colorDialogBg">#2F000000</color>
+    <color name="colorPrimary">#FF5722</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="TabBottomText">#FF7B7B7B</color>
+    <color name="TabBottomTextSelect">#FF3791FF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="touming">#3F000000</color>
+    <color name="weather_bk">#36d781</color>
+    <color name="me_erweima">#de0000</color>
+    <color name="bj_one_tip">#a3a3a3</color>
+    <color name="bj_one_diver">#eaeaea</color>
+    <color name="bj_one_long">#de0000</color>
+    <color name="black">#000000</color>
+    <color name="bj_des_tip">#777777</color>
+    <color name="maintab_default_color">#FF7B7B7B</color>
+    <color name="maintab_selected_color">#FF3791FF</color>
+
+    <color name="BLUE_6684EF">#FF6684EF</color>
+    <color name="BLUE_5E7DFC">#5E7DFC</color>
+
+    <color name="black4C">#4C4C4C</color>
+    <color name="gray">#8d8d8d</color>
+    <color name="graya2">#A2A8B0</color>
+    <color name="grayf0">#F0F0F0</color>
+    <color name="grayd8">#D8D8D8</color>
+    <color name="graye8">#E8E8E8</color>
+    <color name="gray777">#777777</color>
+    <color name="grayf4f7f7">#F4F7F7</color>
+
+    <color name="orange">#FF8C00</color>
+
+    <color name="gray9">#999</color>
+    <color name="gray83">#838383</color>
+    <color name="black333">#333333</color>
+    <color name="black3F">#3F3F3F</color>
+    <color name="black42">#424242</color>
+    <color name="black555">#555555</color>
+    <color name="white">#FFFFFF</color>
+    <color name="whiteD">#DDDDDD</color>
+    <color name="whiteE">#EEEEEE</color>
+    <color name="arm_des_press">#3891ff</color>
+    <color name="map_list_top">#6395ff</color>
+    <color name="alarm_no_two">#a4a4a4</color>
+    <color name="color_blue">#4499ff</color>
+    <color name="gray_01">#b3cccbcb</color>
+    <color name="white_01">#fafafa</color>
+    <color name="white_02">#fafafa</color>
+    <color name="stat_lx">#B0B0B1</color>
+    <color name="stat_zx">#5BC142</color>
+    <color name="stat_cb">#E00B0B</color>
+    <color name="stat_yc">#B9C303</color>
+
+</resources>

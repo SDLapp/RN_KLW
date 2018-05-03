@@ -1,0 +1,6 @@
+module Pods_RN_KLW [system] {
+  umbrella header "Pods-RN_KLW-umbrella.h"
+
+  export *
+  module * { export * }
+}

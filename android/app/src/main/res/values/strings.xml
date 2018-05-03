@@ -1,0 +1,5 @@
+<resources>
+    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">RnfQeRH9Xx89YkBSqaO11OXfvzoCd4a7e3a5-9ea1-45d8-9b3f-6f08d1f6119f</string>
+    <string name="app_name">RN_KLW</string>
+    <string name="system_name">智能环境综合监控平台</string>
+</resources>

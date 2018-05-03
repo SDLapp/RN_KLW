@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/welcomeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dimen1"
+        android:layout_alignParentTop="true"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_below="@+id/ll_bar"
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_splash" />
+
+    <ImageView
+        android:id="@+id/cir_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen180"
+        android:src="@drawable/splah_yuan" />
+
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cir_circle"
+        android:text="智能环境综合监控平台"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimen56"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen10"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="北京雪迪龙科技股份有限公司"
+        android:textColor="@color/TabBottomText"
+        android:textSize="@dimen/dimen26"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/dimen90"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Copyright@2017 SDL.All Rights Reserved"
+        android:textColor="@color/TabBottomText"
+        android:textSize="@dimen/dimen26"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/dimen40"/>
+</RelativeLayout>
