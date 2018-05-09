@@ -30,7 +30,9 @@ const compareDialogModalSelected = 2,pollutantTypeDialogModalSelected=1,datePick
 @connect(({pointdetail,loading,})=>({
     PollutantData:pointdetail.PollutantData,
     refresh:loading.effects['pointdetail/refresh'],
-    getPollutantRelated:loading.effects['pointdetail/getPollutantRelated'],}))
+    // firstLoading:pointdetail.firstLoading,
+    getPollutantRelated:loading.effects['pointdetail/getPollutantRelated'],
+}))
 class PointDetail extends Component {
 
     constructor(props){
@@ -137,6 +139,7 @@ class PointDetail extends Component {
         let listHeight = this._tagview&&this._tagview.wrappedInstance
                             && this._tagview.wrappedInstance!= undefined
                             &&this._tagview.wrappedInstance.getTag()==8?(contentHeight-16)/2:(contentHeight-16)*3/5;
+        
         return (
             <View style={styles.container}>
                 <TagView 

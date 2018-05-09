@@ -50,7 +50,9 @@ class MySelf extends PureComponent {
         clearToken();
         this.props.dispatch(createAction('datapreview/updateState')({groupItems:[]}));
         const loginmsg = await loadStorage('loginmsg');
-        loginmsg.password = '';
+        if (!loginmsg.isremenber) {
+            loginmsg.password = '';
+        }
         await saveStorage('loginmsg', loginmsg);
         this.props.dispatch(NavigationActions.navigate({ routeName: 'Login' }));
       }

@@ -35,7 +35,9 @@ class DataPreviewList extends PureComponent {
      * 跳转至详情页
     */
     _goToDetail = async(item) =>{
+        // console.log('===================================');
         requestAnimationFrame (()=>{
+            // this.props.dispatch(createAction('pointdetail/updateState')({firstLoading:true}));
             this.props.dispatch(NavigationActions.navigate({
                 routeName:'PointDetail',
                 params:{item:item},

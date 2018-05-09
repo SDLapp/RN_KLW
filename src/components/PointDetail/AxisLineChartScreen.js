@@ -327,9 +327,9 @@ class AxisLineChartScreen extends PureComponent {
           drawBorders={false}
           touchEnabled={true}
           dragEnabled={true}
-          scaleEnabled={true}
-          scaleXEnabled={true}
-          scaleYEnabled={true}
+          scaleEnabled={false}
+          scaleXEnabled={false}
+          scaleYEnabled={false}
           pinchZoom={false}
           doubleTapToZoomEnabled={false}
           dragDecelerationEnabled={true}

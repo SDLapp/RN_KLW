@@ -35,6 +35,7 @@ export default Model.extend({
         validDataCount:0,
         validCompareDataCount:0,
         isRefreshing:false,
+        firstLoading:false,
     },
     reducers:{
         
@@ -88,12 +89,6 @@ export default Model.extend({
                 ticks,chartData,chartDomain,validDataCount,
                 'CompareData':[],'isRefreshing':false,
             });
-
-            // yield put('updateState',{
-            //     'selectDate':timeSpan.str,'PollutantData':listArray,
-            //     ticks,chartData,chartDomain,validDataCount,
-            //     'CompareData':[],'isRefreshing':false,
-            // });
         },
         //实时
         *GetRealTimeData({ payload: {item,time,Pollutant} }, { update, call, put,select,take }){
@@ -291,18 +286,19 @@ export default Model.extend({
                 let {ticks,chartData, chartDomain,validDataCount,} 
                     = handlePollutantData({'PollutantData':tempArray,'ServiceType':2,'tag':item.tag,
                                             'PollutantCode':Pollutants[PollutantSelect].PollutantCode});
+                yield put('getBdPoints',{ 
+                    item:item,
+                    Pollutant:Pollutants[PollutantSelect] 
+                });
+                yield take('getBdPoints/@@end');
                 yield update ({
                     'timeSpan':time,Pollutants,ServiceType:2,
                     searchType:'xiaoshi',PollutantSelect:0,item,
                     'selectDate':timeSpan.str,'PollutantData':listArray,
                     ticks,chartData,chartDomain,validDataCount,
                     'CompareData':[],'isRefreshing':false,
+                    'firstLoading':true,
                 });
-                yield put('getBdPoints',{ 
-                    item:item,
-                    Pollutant:Pollutants[PollutantSelect] 
-                });
-                yield take('getBdPoints/@@end');
             } else {
                 Toast.info('该监测点没有监测项！', 2, null, false);
                 yield put(NavigationActions.back());
@@ -312,23 +308,28 @@ export default Model.extend({
             const { selectedPolluntType,user } = yield select(state => state.app);
             const { searchType } = yield select(state => state.pointdetail);
             //Latitude/Longitude
-            let result = yield call(pointdetailService.GetSystemPoints,{ 
-                pollutantType:selectedPolluntType,
-                searchTime:formatDateString(new Date()),
-                GroupID:item.GroupID,
-            });
-            let GKpointBeens = {};
-            if (searchType == 'xiaoshi') {
-                GKpointBeens =  yield call(datapreviewService.getLastHourData, 
-                    {type:selectedPolluntType,user,'searchTime':item.Times,mTag:xiaoshi,GroupID:item.GroupID});
-            } else if (searchType == 'ri') {
-                GKpointBeens =  yield call(datapreviewService.getLastHourData, 
-                    {type:selectedPolluntType,user,'searchTime':item.Times,mTag:ri,GroupID:item.GroupID});
-            }
-            result = GKpointBeens.concat(result);
+            // let result = yield call(pointdetailService.GetSystemPoints,{ 
+            //     pollutantType:selectedPolluntType,
+            //     searchTime:formatDateString(new Date()),
+            //     GroupID:item.GroupID,
+            // });
+            let {pointBeens:result} = yield select(state => state.datapreview);
+            // let GKpointBeens = {};
+            // if (searchType == 'xiaoshi') {
+            //     GKpointBeens =  yield call(datapreviewService.getLastHourData, 
+            //         {type:selectedPolluntType,user,'searchTime':item.Times,mTag:xiaoshi,GroupID:item.GroupID});
+            // } else if (searchType == 'ri') {
+            //     GKpointBeens =  yield call(datapreviewService.getLastHourData, 
+            //         {type:selectedPolluntType,user,'searchTime':item.Times,mTag:ri,GroupID:item.GroupID});
+            // }
+            // result = GKpointBeens.concat(result);
             result = result.filter(todo=>{
-                return todo[Pollutant.PollutantCode]!=undefined&&todo[Pollutant.PollutantCode]!=undefined&&todo.DGIMN!=item.DGIMN;
-            })
+                return todo.GroupID==item.GroupID
+                &&todo[Pollutant.PollutantCode]!=undefined
+                &&todo[Pollutant.PollutantCode]!=undefined
+                &&todo.DGIMN!=item.DGIMN;
+            });
+            result.reverse();
             yield update({ComparePointData:result});
         },
         *getHourBdData({ payload: {item,compareItem,time,Pollutant} }, { update, call, put,select,take }){
